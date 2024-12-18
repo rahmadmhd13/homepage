@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Lesty Kirana</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Tambahan CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #5a67d8;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .contact-info a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 800px;
+        }
+        h2 {
+            border-bottom: 2px solid #5a67d8;
+            padding-bottom: 10px;
+            color: #333;
+        }
+        .skills ul, .experience ul {
+            list-style: square;
+            padding-left: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .work-item {
+            text-align: center;
+            width: 200px;
+        }
+        .work-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .work-item img:hover {
+            transform: scale(1.1);
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #25d366;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #128c7e;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>Lesty Kirana</h1>
+            <p>Saya tertarik dengan dunia menulis sejak duduk di Sekolah Dasar...</p>
+            <div class="contact-info">
+                <p>
+                    📞 <a href="tel:0852345678910">0852-3456-78910</a> |
+                    ✉ <a href="mailto:kejorabintang@gmail.com">kejorabintang@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Kemampuan -->
+    <section class="skills">
+        <h2>Kemampuan</h2>
+        <ul>
+            <li>Menulis dan menerbitkan buku fiksi dan nonfiksi.</li>
+            <li>Menulis artikel bahasa Indonesia berbagai tema.</li>
+            <li>Menguasai ilmu editing dan dasar-dasar SEO.</li>
+            <li>Familiar dengan KBBI, Tesaurus, dan gaya selingkung.</li>
+        </ul>
+    </section>
+
+    <!-- Pengalaman -->
+    <section class="experience">
+        <h2>Pengalaman</h2>
+        <ul>
+            <li>Content writer freelance untuk berbagai website dan portal berita | 2010 - Sekarang</li>
+            <li>Penulis buku dan telah menerbitkan lebih dari 350 judul buku | 2010 - 2022</li>
+            <li>Editor freelance di penerbit Gramedia Group | 2012 - 2022</li>
+            <li>Ghostwriter freelance | 2015 - 2022</li>
+        </ul>
+    </section>
+
+    <!-- Karya -->
+    <section class="works">
+        <h2>Karya</h2>
+        <div class="gallery">
+            <div class="work-item">
+                <img src="images/book1.jpg" alt="Ruang Lentera">
+                <p>Judul Buku: Ruang Lentera</p>
+            </div>
+            <div class="work-item">
+                <img src="images/article1.jpg" alt="Surat Pengunduran Diri">
+                <p>6 Contoh Surat Pengunduran Diri</p>
+            </div>
+            <div class="work-item">
+                <img src="images/article2.jpg" alt="Jawaban Wawancara">
+                <p>Jawaban 'Mengapa Kamu Orang yang Tepat?'</p>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <a href="mailto:kejorabintang@gmail.com" class="cta-button">Hubungi Saya</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lesty Kirana. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        // Tambahan efek untuk elemen saat dokumen dimuat
+        document.addEventListener("DOMContentLoaded", function () {
+            const header = document.querySelector('header');
+            header.style.opacity = "1";
+            header.style.transition = "opacity 1s ease-in-out";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kontak Kami</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #25D366;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #128C7E;
+        }
+        .back-button {
+            background-color: #888;
+        }
+        .back-button:hover {
+            background-color: #555;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Kontak Kami</h2>
+        <form id="contact-form">
+            <label for="name">Your Name (required)</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+            
+            <label for="phone">Your Phone Number (required)</label>
+            <input type="text" id="phone" name="phone" placeholder="Masukkan nomor WhatsApp Anda" required>
+            
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Masukkan subjek">
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini" required></textarea>
+            
+            <div class="button-group">
+                <!-- Tombol Kirim WhatsApp -->
+                <button type="submit">Kirim via WhatsApp</button>
+                <!-- Tombol Kembali ke Folder Lain -->
+                <button type="button" class="back-button" onclick="window.location.href='../1.1/fronend.html'">Kembali home</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Event listener untuk form submit
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const subject = document.getElementById("subject").value || "Tanpa Subjek";
+            const message = document.getElementById("message").value;
+
+            const whatsappMessage = `Halo, saya ${name}%0A%0ASubjek: ${subject}%0A%0APesan:%0A${message}`;
+            const whatsappNumber = "6283133223338";
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+            window.open(whatsappURL, "_blank");
+        });
+    </script>
+</body>
+</html>
